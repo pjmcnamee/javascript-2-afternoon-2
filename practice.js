@@ -163,7 +163,13 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
-
+function finder(array){
+  if(array.includes(getRandomArbitrary()) === true){
+    return true
+  } else {
+    return false
+  }
+}
 
 
 
@@ -195,7 +201,9 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 //Code Here
 
+// function removeItem (myGroceryList,myGroceryList){
 
+// }
 
 ////////// PROBLEM 9 //////////
 
@@ -205,7 +213,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 //Code Here
 
-
+function maker(){
+  array = []
+  for(let i = 1; i <= 215; i++){
+    array.push(i)
+  }
+  return array
+}
 
 ////////// PROBLEM 10 //////////
 
@@ -220,6 +234,14 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
+
+function addTen(numbers){
+  const arr = []
+  for(let i = 0;i < numbers.length; i++){
+    arr.push((+numbers[i]+10))
+  }
+  return arr
+}
 
 
 
@@ -245,7 +267,13 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
+function longer(arr1,arr2){
+  if(arr1.length > arr2.length) {
+    return arr1
+  } else {
+    return arr2
+  }
+}
 
 
 /*
@@ -257,7 +285,17 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
+function both(arr1,arr2){
+  newArr = []
+  for(let i = 0; i < arr1.length;i++){
+    for(let j = 0; j < arr2.length;j++){
+      if(arr1[i]===arr2[j]){
+        newArr.push(arr1[i])
+      }
+    }
+  }
+  return newArr
+}
 
 
 ////////// PROBLEM 12 //////////
@@ -298,7 +336,12 @@ var colt = {
 
 //Code Here
 
+devMountainEmployees.push(tyler)
+devMountainEmployees.push(ryan)
+devMountainEmployees.push(cahlan)
+devMountainEmployees.push(colt)
 
+console.log(devMountainEmployees)
 
 /*
   Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
@@ -306,6 +349,13 @@ var colt = {
 */
 
 //Code Here
+for(let i = 0; i < devMountainEmployees.length;i++){
+  if(devMountainEmployees[i].name === 'Cahlan'){
+    devMountainEmployees.splice(i,1)
+  }
+}
+
+console.log(devMountainEmployees[2])
 
 
 
@@ -318,6 +368,7 @@ var colt = {
 */
 
 //Code Here
+const users = []
 
 
 
@@ -338,6 +389,10 @@ var user1 = {
 
 //Code Here
 
+users.push(user1);
+
+console.log(users)
+
 
 
 /*
@@ -351,6 +406,12 @@ var user1 = {
 */
 
 //Code Here
+
+for(let i = 0; i < users.length; i++){
+  if(users[i].email === 'tylermcginnis33@gmail.com'){
+    users.splice(i,1)
+  }
+}
 
 
 
